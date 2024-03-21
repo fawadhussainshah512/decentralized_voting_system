@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" type="text/css" href="../css/contact.css">
+  <script src="../js/contact.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("1ao6Q1MqN26uuay03");
+    })();
+  </script>
+</head>
+<body>
+  <video autoplay loop muted plays-inline class="back-video">
+    <source src="../assets/background.mp4" type="video/mp4">
+  </video>
+  <nav>
+    <img src="../assets/logo.png" alt="logo" class="logo">
+    <ul>
+        <li><a href="/html/home.html">Home</a></li>
+        <li><a href="/login.html">Login</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+  <div class="container">
+    <div class="contact-form">
+      <h1>Contact form</h1>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Enter name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="Enter email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="3"></textarea>
+      </div>
+      <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+    </div>
+  </div>
+</body>
+</html>
