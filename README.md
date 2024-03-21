@@ -1,0 +1,1 @@
+A decentralized voting system.
